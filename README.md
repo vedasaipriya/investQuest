@@ -1,22 +1,22 @@
-Gamification - Investment Journey
+Gamification - Investment Journey<br>
 
-backend:
-npm i express
-npm i nodemon
-npm i dotenv
-npm i mongoose 
-npm i morgan 
-npm i bcrypt
-npm i jsonwebtoken
-npm  i cors
-npm  i concurrently
+backend:<br>
+npm i express<br>
+npm i nodemon<br>
+npm i dotenv<br>
+npm i mongoose <br>
+npm i morgan <br>
+npm i bcrypt<br>
+npm i jsonwebtoken<br>
+npm  i cors<br>
+npm  i concurrently<br>
 
-frontend:
-cd client
-npm i react-router-dom
-npm i react-icons
-npm i axios
-npm i react-hot-toast
+frontend:<br>
+cd client<br>
+npm i react-router-dom<br>
+npm i react-icons<br>
+npm i axios<br>
+npm i react-hot-toast<br>
 
-to run application
-npm run dev
+to run application<br>
+npm run dev<br>
