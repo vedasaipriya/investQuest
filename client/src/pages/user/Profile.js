@@ -1,33 +1,4 @@
-import React from "react";
-import UserMenu from "../../components/Layout/UserMenu";
-import Layout from "./../../components/Layout/Layout";
-
-const Profile = () => {
-  return (
-    <Layout title={"Your Profile"}>
-      <div className="container-fluid m-3 p-3">
-        <div className="row">
-          <div className="col-md-3">
-            <UserMenu />
-          </div>
-          <div className="col-md-9">
-            <h1>Your Profile</h1>
-          </div>
-        </div>
-      </div>
-    </Layout>
-  );
-};
-
-export default Profile;
-
-
-
-
-
-
-
-/*import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import UserMenu from "../../components/Layout/UserMenu";
 import Layout from "./../../components/Layout/Layout";
 import { useAuth } from "../../context/auth";
@@ -44,16 +15,16 @@ const Profile = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
+  const [age, setAge] = useState("");
 
 
   //get user data
   useEffect(() => {
-    const { email, name, phone, address } = auth?.user;
+    const { email, name, phone, age } = auth?.user;
     setName(name);
     setPhone(phone);
     setEmail(email);
-    setAddress(address);
+    setAge(age);
   }, [auth?.user]);
 
 
@@ -67,7 +38,7 @@ const Profile = () => {
         email,
         password,
         phone,
-        address,
+        age,
       });
 
       if (data?.error) {
@@ -90,7 +61,7 @@ const Profile = () => {
   };
 
   return (
-    <Layout >
+    <Layout title={"Your Profile"}>
       <div className="container-fluid m-3 p-3">
         <div className="row">
 
@@ -109,7 +80,7 @@ const Profile = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="form-control"
-                    id="exampleInputEmail1"
+                    id="exampleInputName1"
                     placeholder="Enter Your Name"
                     autoFocus
                   />
@@ -144,7 +115,7 @@ const Profile = () => {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     className="form-control"
-                    id="exampleInputEmail1"
+                    id="exampleInputPhone1"
                     placeholder="Enter Your Phone"
                   />
                 </div>
@@ -152,11 +123,11 @@ const Profile = () => {
                 <div className="mb-3">
                   <input
                     type="text"
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
+                    value={age}
+                    onChange={(e) => setAge(e.target.value)}
                     className="form-control"
-                    id="exampleInputEmail1"
-                    placeholder="Enter Your Address"
+                    id="exampleInputAge1"
+                    placeholder="Enter Your age"
                   />
                 </div>
 
@@ -173,4 +144,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;*/
+export default Profile;

@@ -1,6 +1,5 @@
 import React from 'react'
 import {NavLink,Link} from 'react-router-dom';
-import { GiShoppingBag } from "react-icons/gi";
 import { useAuth } from '../../context/auth';
 import toast from 'react-hot-toast';
 
@@ -22,25 +21,18 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand" >
-              <GiShoppingBag/> InvestQuest
+                InvestQuest
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              
-              <li className="nav-item">
-                <NavLink to="/" className="nav-link">
-                  Home
+             
+            <li className="nav-item">
+                <NavLink to="/dashboard/user" className="nav-link">
+                  DashBoard
                 </NavLink>
               </li>
-
               <li className="nav-item">
                 <NavLink to="/category" className="nav-link">
-                  Shop
-                </NavLink>
-              </li>
-
-              <li className="nav-item">
-                <NavLink to="/explore" className="nav-link" >
-                 Simulator
+                  Financial Ground
                 </NavLink>
               </li>
 
@@ -64,10 +56,10 @@ const Header = () => {
                       {auth?.user?.name}
                     </NavLink>
                     <ul className="dropdown-menu">
-                      <li><NavLink to ={
-                        `/dashboard/${auth?.user?.role === 1 ? 'admin':'user'}`
-                        } 
-                        className="dropdown-item" >Dashboard</NavLink></li>
+                      <li>
+                        <NavLink to = "/dashboard/user/profile" className="dropdown-item" >
+                          Profile
+                        </NavLink></li>
                      <li>
                       <NavLink onClick={handleLogout} to="/login" className="dropdown-item"  >
                       Logout
@@ -81,8 +73,8 @@ const Header = () => {
               }
 
               <li className="nav-item">
-                <NavLink to="/explore" className="nav-link" >
-               Help
+                <NavLink to="/faqs" className="nav-link" >
+                  FAQS?
                 </NavLink>
               </li>
 
