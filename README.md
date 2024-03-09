@@ -17,3 +17,6 @@ npm i react-router-dom
 npm i react-icons
 npm i axios
 npm i react-hot-toast
+
+to run application
+npm run dev
